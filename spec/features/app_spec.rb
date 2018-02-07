@@ -10,10 +10,10 @@ end
 RSpec.feature "player names", :type => :feature do
   scenario "Enter player names" do
     visit "/"
-    fill_in "player 1", with: "Marcus"
-    fill_2 "player 2", with: "Jenny"
-    click_button "Prepare to fight!"
-    expect(page).to have_content "Marcus\nJenny"
+    fill_in "name_1", with: "Marcus"
+    fill_in "name_2", with: "Jenny"
+    click_button "PREEEPPPPARREEE FOR BATTTLLLEEE"
+    expect(page).to have_content "Marcus vs Jenny"
 
   end
 end
