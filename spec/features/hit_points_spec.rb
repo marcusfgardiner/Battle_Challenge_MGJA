@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 RSpec.feature 'Hit points for each player', type: :feature do
   scenario 'Hit points for players 2' do
     sign_in_and_play

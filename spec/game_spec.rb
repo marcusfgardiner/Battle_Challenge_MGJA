@@ -8,8 +8,8 @@ describe Game do
   subject(:game) {Game.new(player_1, player_2)}
 
   it 'instantiates with 2 players' do
-    expect(game.player_1).to eql player_1
-    expect(game.player_2).to eql player_2
+    expect(game.players).to include player_1
+    expect(game.players).to include player_2
   end
 
   describe "#attack" do
