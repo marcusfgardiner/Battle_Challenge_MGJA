@@ -11,10 +11,8 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    @player_1 = params[:name_1]
-    @player_2 = params[:name_2]
-    session[:session_1]= @player_1
-    session[:session_2]= @player_2
+    session[:session_1] = params[:name_1]
+    session[:session_2] = params[:name_2]
     redirect '/play'
   end
 
