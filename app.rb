@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require_relative 'lib/player'
 # preventing issues with sending secure session information
 #set :session_secret, 'super secret'
 
@@ -11,14 +12,14 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    session[:session_1] = params[:name_1]
-    session[:session_2] = params[:name_2]
+    $player_1 = Player.new(params[:name_1])
+    $player_2 = Player.new(params[:name_2])
     redirect '/play'
   end
 
   get '/play' do
-    @player_1 = session[:session_1]
-    @player_2 = session[:session_2]
+    @player_1 = $player_1.name
+    @player_2 = $player_2.name
     erb :play
   end
 
