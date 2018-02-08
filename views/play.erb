@@ -1,8 +1,8 @@
 <div>
-  <%= "#{@player_1} " %>
+  <%= "#{@player_1_name} " %> <p> HP: <%= "#{@player_1_hp}" %> </p>
 </div>
 <div>
-  <%= "#{@player_2}" %>  <p> HP: 100 </p>
+  <%= "#{@player_2_name}" %>  <p> HP: <%= "#{@player_2_hp}" %> </p>
   <form action="/attack" method="get">
     <button type="submit" value="attack player 2">
     <h2> Spit rhymes </h2>

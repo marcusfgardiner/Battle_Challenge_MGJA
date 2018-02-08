@@ -1,1 +1,14 @@
-<h2>You attacked player 2 with some mad rhymes</h2>
+<h2><%= "#{@player_1_name} " %>  attacked
+  <%= "#{@player_2_name} " %> with some mad rhymes
+</h2>
+<div>
+  <p><%= "#{@player_1_name} " %> HP: <%= "#{@player_1_hp}" %></p>
+</div>
+<div>
+  <p><%= "#{@player_2_name}" %> HP: <%= "#{@player_2_hp}" %></p>
+  <form action="/attack" method="get">
+    <button type="submit" value="attack player 2">
+    <h2> Spit rhymes </h2>
+    </button>
+  </form>
+</div>
