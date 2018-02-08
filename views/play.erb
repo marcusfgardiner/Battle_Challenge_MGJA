@@ -3,7 +3,9 @@
 </div>
 <div>
   <%= "#{@player_2}" %>  <p> HP: 100 </p>
-  <button type="submit" value="attack player 2" formaction="/attack">
-    Spit rhymes
-  </button>
+  <form action="/attack" method="get">
+    <button type="submit" value="attack player 2">
+    <h2> Spit rhymes </h2>
+    </button>
+  </form>
 </div>
