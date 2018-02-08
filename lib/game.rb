@@ -1,8 +1,14 @@
 class Game
 
-  def initialize(player_class = Player, name_1, name_2)
-    @player_1 = player_class.new(name_1)
-    @player_2 = player_class.new(name_2)
+  attr_reader :player_1, :player_2
+
+  def initialize(player_1, player_2)
+    @player_1 = player_1
+    @player_2 = player_2
+  end
+
+  def attack(attacked_player, damage = 20)
+    attacked_player.receive_damage(damage)
   end
 
 end

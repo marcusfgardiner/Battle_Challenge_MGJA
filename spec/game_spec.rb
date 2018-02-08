@@ -12,4 +12,11 @@ describe Game do
     expect(game.player_2).to eql player_2
   end
 
+  describe "#attack" do
+    it "calls Player#receive_damage on attacked player" do
+      expect(player_1).to receive(:receive_damage)
+      game.attack(player_1)
+    end
+  end
+
 end

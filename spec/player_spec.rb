@@ -16,16 +16,10 @@ describe Player do
     end
   end
 
-  describe '#attack to call #receive_damage' do
-    it 'attacks a player and reduces the hitpoints' do
-      expect(diamanda).to receive(:receive_damage)
-      falcon.attack(diamanda)
-
-    end
-
-    it "#attack reduces attacked player's hitpoint" do
-      falcon.attack(diamanda)
-      expect(diamanda.hitpoints).to eq 80
+  describe "#receive_damage" do
+    it "reduces hitpoints by amount given" do
+      damage = 20
+      expect{ falcon.receive_damage(damage) }.to change { falcon.hitpoints }.by(-damage)
     end
   end
 end
