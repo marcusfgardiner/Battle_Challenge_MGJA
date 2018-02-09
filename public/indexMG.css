@@ -1,0 +1,27 @@
+html {
+  background-image: url("https://www.uphe.com/sites/default/files/2015/04/8-Mile-Gallery-6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+}
+
+.playerform {
+  background-color: #ffffff7a;
+  margin: 2em;
+}
+
+.buttoneminem {
+  height: 3em;
+  width: 20em;
+  font-size: 1.5em;
+  margin-left: 1.3em;
+}
+
+.buttoneminem:hover {
+  background-color: red;
+  box-shadow: 2px 2px;
+}
