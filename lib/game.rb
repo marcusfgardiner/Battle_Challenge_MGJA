@@ -20,10 +20,17 @@ class Game
     switch_turn
   end
 
+  def defending_player
+    (@players - [@current_player])[0]
+  end
+
   private
 
   def switch_turn
     @current_player = (@players - [@current_player])[0]
   end
+
+
+
 
 end
