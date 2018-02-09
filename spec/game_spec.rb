@@ -33,7 +33,8 @@ describe Game do
 
   describe '#switch_turn' do
     it 'Switches the live player object' do
-      game.switch_turn
+      allow(player_2).to receive(:receive_damage)
+      game.attack(player_2)
       expect(game.current_player).to eq player_2
     end
   end
