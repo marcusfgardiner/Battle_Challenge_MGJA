@@ -13,7 +13,7 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    $game = Game.new(Player.new(params[:name_1]), Player.new(params[:name_2]))
+    @game = Game.create(Player.new(params[:name_1]), Player.new(params[:name_2]))
     redirect '/play'
   end
 
@@ -32,10 +32,10 @@ class Battle < Sinatra::Base
     end
   end
 
-    get '/game_over' do
-      @game = $game
-      erb :game_over
-    end
+  get '/game_over' do
+    @game = $game
+    erb :game_over
+  end
 
   run! if app_file == $0
 
