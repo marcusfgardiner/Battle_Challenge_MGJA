@@ -2,10 +2,7 @@
   <%= @game.player_two.name %> with some mad rhymes
 </h2>
 
-<% if @game.current_player.hitpoints <= 0  %>
-  <%= @game.current_player.name %> died.
-  <%= @game.defending_player.name %> is the best MC ever *mic drop*.
-<% end %>
+
 <div class="turn" style="background: red;"> <%= @game.current_player.name %>'s turn </div>
 
 <div>
