@@ -19,4 +19,23 @@ describe Game do
     end
   end
 
+  describe '#player_one' do
+    it 'Returns player 1 object' do
+      expect(game.player_one).to eq player_1
+    end
+  end
+
+  describe '#player_two' do
+    it 'Returns player 2 object' do
+      expect(game.player_two).to eq player_2
+    end
+  end
+
+  describe '#switch_turn' do
+    it 'Switches the live player object' do
+      game.switch_turn
+      expect(game.current_player).to eq player_2
+    end
+  end
+
 end
