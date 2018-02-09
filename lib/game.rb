@@ -24,13 +24,14 @@ class Game
     (@players - [@current_player])[0]
   end
 
+  def game_over?
+    player_one.hitpoints <= 0 || player_two.hitpoints <= 0
+  end
+
   private
 
   def switch_turn
     @current_player = (@players - [@current_player])[0]
   end
-
-
-
 
 end
