@@ -1,15 +1,20 @@
-
 <h2><%= @game.player_one.name %>  attacked
   <%= @game.player_two.name %> with some mad rhymes
 </h2>
+
+<% if @game.current_player.hitpoints <= 0  %>
+  <%= @game.current_player.name %> died.
+  <%= @game.defending_player.name %> is the best MC ever *mic drop*.
+<% end %>
 <div class="turn" style="background: red;"> <%= @game.current_player.name %>'s turn </div>
+
 <div>
   <%= @game.player_one.name %> <p> HP: <%= @game.player_one.hitpoints %> </p>
 </div>
 <div>
   <%= @game.player_two.name %>  <p> HP: <%= @game.player_two.hitpoints %> </p>
   <form action="/attack" method="get">
-    <button type="submit" value="attack player 2">
+    <button type="submit" value="attack">
     <h2> Spit rhymes </h2>
     </button>
   </form>
